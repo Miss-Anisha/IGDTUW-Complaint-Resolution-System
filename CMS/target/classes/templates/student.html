@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/student/student" class="navbar-link">Dashboard</a>
+        
+        <div class="profile-dropdown">
+            <input type="checkbox" id="profile-toggle" class="profile-toggle">
+        
+            <label for="profile-toggle" class="profile-link">
+            	<img th:src="@{${profileImageUrl}}" alt="Profile Icon" class="profile-icon"/>
+            </label>
+        
+            <div class="dropdown-content">
+                <a href="/student_profile">My Profile</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Welcome <span th:text="${student.studentName}"></span></h1>
+                <p>Manage your complaints here</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Register Complaint</h5>
+                        <p class="card-text">Click below to register a new complaint</p>
+                        <a href="/complaint" class="btn btn-primary">Register Complaint</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">View All Complaints</h5>
+                        <p class="card-text">See all complaints registered by students</p>
+                        <a href="/student/allComplaints" class="btn btn-info">View All Complaints</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">My Complaints</h5>
+                        <p class="card-text">See complaints registered by you</p>
+                        <a href="/student/myComplaints" class="btn btn-success">My Complaints</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

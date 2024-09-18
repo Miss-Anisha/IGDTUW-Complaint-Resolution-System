@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* Base Styles */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+}
+
+body {
+    background-image: url('/images/igdtuw.webp');
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 20px;
+    border-bottom: 2px solid #135107;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: auto;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.header .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.header .heading h1 {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    color: #135107;
+}
+
+.header .heading p {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin-top: 100px; 
+}
+
+.btn {
+    background-color: #28a745; 
+    border-color: #28a745; 
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #218838; 
+    border-color: #1e7e34; 
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center; /* Center-align header content */
+        padding: 10px;
+    }
+    
+    .header .heading {
+        margin: 5px 15px 5px 0;
+        text-align: center; /* Center-align the heading text */
+    }
+
+    .header .logo {
+        margin-bottom: 8px;
+    }
+    
+    .header .logo img {
+        width: 80px;
+    }
+
+    .header .heading h1 {
+        font-size: 24px;
+    }
+
+    .header .heading p {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 15px;
+        margin-top: 130px; /* Increased margin-top to avoid overlap with header */
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 540px) {     
+	.header .heading {
+		margin: 0;
+		padding: 0;
+	}
+	
+    .header .heading h1 {
+        font-size: 20px;
+    }
+
+    .header .heading p {
+        font-size: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        margin-top: 140px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

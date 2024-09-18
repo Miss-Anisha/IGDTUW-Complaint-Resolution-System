@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+/* Base Styles */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: Arial, sans-serif; 
+}
+
+body {
+    background-image: url('/images/igdtuw.webp');
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 18px 20px;
+    border-bottom: 2px solid #135107;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: auto;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.header .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.header .heading h1 {
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    color: #135107;
+}
+
+.header .heading p {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 120px; 
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px; /* Consistent with home.css */
+    color: #000; /* Consistent with home.css */
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.form-group i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000; /* Consistent with home.css */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 6px 12px 6px 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #28a745; /* Consistent with home.css */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #218838; /* Consistent with home.css */
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    background-color: #3c8dbc; /* Consistent with home.css */
+    border-color: #357abd; /* Consistent with home.css */
+    color: #fff;
+    padding: 6px 12px;
+    text-decoration: none;
+    margin: 0 5px;
+    border-radius: 4px;
+}
+
+.links a:hover {
+    background-color: #357abd; /* Consistent with home.css */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center; /* Center-align header content */
+        padding: 10px;
+    }
+    
+    .header .heading {
+        margin: 5px 15px 5px 0;
+        text-align: center; /* Center-align the heading text */
+    }
+
+    .header .logo {
+        margin-bottom: 8px;
+    }
+    
+    .header .logo img {
+        width: 80px;
+    }
+
+    .header .heading h1 {
+        font-size: 24px;
+    }
+
+    .header .heading p {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 15px;
+        margin-top: 150px; /* Increased margin-top to avoid overlap with header */
+    }
+}
+
+@media (max-width: 540px) {     
+	.header .heading {
+		margin: 0;
+		padding: 0;
+	}
+	
+    .header .heading h1 {
+        font-size: 20px;
+    }
+
+    .header .heading p {
+        font-size: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        margin-top: 140px;
+    }
+    
+    .form-group input,
+    .form-group select {
+        padding: 6px 10px 6px 30px;
+    }
+
+    .form-group i {
+        font-size: 14px;
+    }
+
+    .links a {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 375px) {
+	.header .logo img {
+		display: none;
+	}
+}
